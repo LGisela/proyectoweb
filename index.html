@@ -4,68 +4,62 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="styles.css">
-    <title>Pagina principal</title>
+    <title>Página principal</title>
 </head>
 <body>
-    <nav>
-        <ul>
-            <li><a href="index.html"></a></li>
-            <li><a href="articulo.html"></a></li>
-            <li><a href="Contacto.html"></a></li>
-        </ul>
-    </nav>
-</ul>
-</nav>
-
-<header>
-    <img src="images/logo.png" alt="Logo de Pastelería Deliciosa" class="logo">
-    
-    <hr class="divider"> 
-    <div class="nav-bar">
-        <a href="index.html" class="nav-link">Inicio</a>
-        <a href="articulo.html" class="nav-link">Productos</a>
-        <a href="Contacto.html" class="nav-link">Contacto</a>
-    </div>
-    
-        <hr class="divider">
-    
+    <div class="logo-container">
+        <img src="imagenes/logo.jpeg" alt="Logo" class="logo">
     </div>
 
-    
-    <h1>Bienvenidos a Dulces detalles</h1>
-    <p></p>
-</header>
-
-
-<section class="carousel">
-    <section class="carousel">
-        <div class="carousel-container">
-            <img id="carousel-image" src="images/image1.jpg" alt="Pastel 1">
+    <header>
+        <hr class="divider"> 
+        <div class="nav-bar">
+            <a href="index.html" class="nav-link">Inicio</a>
+            <a href="articulo.html" class="nav-link">Productos</a>
+            <a href="Contacto.html" class="nav-link">Contacto</a>
         </div>
-        <button id="prev" onclick="prevImage()">&#10094;</button>
-        <button id="next" onclick="nextImage()">&#10095;</button>
+        <hr class="divider">
+        <h1>Bienvenidos a Dulces Detalles</h1>
+        <p></p>
+    </header>
+
+    <div class="carousel-container">
+        <button id="prev">‹</button>
+        <div class="carousel-inner">
+            <img src="imagenes/1carrucel.jpeg" alt="Imagen 1">
+            <img src="imagenes/1carrucel2.jpeg" alt="Imagen 2">
+            <img src="imagenes/1carrucel3.jpeg" alt="Imagen 3">
+            <img src="imagenes/WhatsApp Image 2024-10-04 at 6.45.48 PM.jpeg" alt="Imagen 4">
+            <img src="imagenes/WhatsApp Image 2024-10-04 at 6.45.52 PM(1).jpeg" alt="Imagen 5">
+            <img src="imagenes/WhatsApp Image 2024-10-04 at 6.45.52 PM.jpeg" alt="">
+        </div>
+        <button id="next">›</button>
+    </div>
+       
+    
+
+    <section>
+        <h2>Nuestros Productos</h2>
+        <p>Ofrecemos una amplia variedad de productos para toda ocasión.</p>
+        <ul>
+            <li>Productos de Chocolate</li>
+            <li>tortas</li>
+            <li>Desayunos</li>
+            <li>Tartas</li>
+        </ul>
     </section>
 
-</section>
+    <section>
+        <h2>Sobre Nosotros</h2>
+        <p>Dulces Detalles nació en mayo del año 2020, en plena pandemia,cuando teniamos la nesecidad de juntarnos o de relagar algo por una fecha especial, nosotros lo elaboramos y lo enviabamos 
+            a los seres queridos 
+        </p>
+    </section>
 
-<section>
-    <h2>Nuestros Productos</h2>
-    <p>Ofrecemos una amplia variedad de productos , para toda ocasion </p>
-    <ul>
-        <li>productos de Chocolate</li>
-        <li>Galletas de Vainilla</li>
-        <li>Postres</li>
-    </ul>
-</section>
-
-<section>
-    <h2>Sobre Nosotros</h2>
-    <p>Dulces detalles nacion en ...</p>
-</section>
-
-<footer>
-    <p>...</p>
-</footer>
-<script src="script.js"></script>
+    <footer>
+        <p>...</p>
+    </footer>
+    
+    <script src="script.js"></script>
 </body>
 </html>
