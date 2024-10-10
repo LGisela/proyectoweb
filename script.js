@@ -35,8 +35,8 @@ carouselContainer.addEventListener('touchmove', (e) => {
 
 carouselContainer.addEventListener('touchend', () => {
     if (startX - endX > 50) {
-        document.getElementById('next').click(); // Desplazar a la derecha
+        document.getElementById('next').click(); 
     } else if (endX - startX > 50) {
-        document.getElementById('prev').click(); // Desplazar a la izquierda
+        document.getElementById('prev').click(); 
     }
 });
