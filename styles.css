@@ -80,6 +80,20 @@ p {
     font-family:'Lucida Sans', 'lucida Sans' ;
     color:#ad5d5d;
 }
+/*tarjetas de articulos*/
+.product-list{
+    display: flex;
+    flex-direction: row;
+    
+}
+.product{
+width: 350px;
+border: 1px solid #ccc;
+border-radius: 10px;
+margin: auto 30px;
+box-shadow: 0 2px 5px rgba(0, 0, 0, 0.5);  
+}
+
 .sobre-nosotros {
     color: #666; 
     font-size: 25px; 
@@ -130,15 +144,16 @@ footer {
 }
 
 .pagina2-texto{
-font-size: 1.8em;
+font-size: 1rem;
 }
-
+.product-tittle{
+    font-size: 2.0rem;
+    }
 .product img {
-    width: 250px; 
-    height: auto; 
-    display: inline-block; 
+    width: 100%; 
+    height: 50px; 
     margin: 0 5px; 
-    ;
+    
 
 }
 .imagenes-contenedor{
@@ -162,6 +177,7 @@ form {
     background-color: #f8f8f8;
     align-items: center;
     justify-content: center;
+    margin: 30px auto;
 }
 
 
