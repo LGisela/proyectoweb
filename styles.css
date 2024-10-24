@@ -7,9 +7,6 @@ body {
     justify-content:flex-start;
     min-height: 100vh;
 }
-a{
-    text-decoration: none;
-}
 
 nav ul {
     display: flex;
@@ -359,3 +356,4 @@ footer {
 .imagenes-contenedor:hover .imagen-secundaria {
     display: block;
 }
+
