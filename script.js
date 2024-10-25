@@ -1,5 +1,3 @@
-
-
 document.addEventListener('DOMContentLoaded', () => {
     // Carrusel
     const imagenes = [
@@ -54,7 +52,6 @@ document.addEventListener('DOMContentLoaded', () => {
 
     mostrarImagenes();
 });
-
 
 
 
