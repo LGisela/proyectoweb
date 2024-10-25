@@ -29,8 +29,7 @@
             <hr class="divicion">
         </header>
 
-        
-        <form id="contactForm">
+        <form id="contactForm" novalidate>
             <label for="name">Nombre:</label>
             <input type="text" id="name" name="name" required>
             <span id="nameError" class="error"></span>
@@ -40,7 +39,7 @@
             <span id="emailError" class="error"></span>
             
             <label for="phone">Teléfono:</label>
-            <input type="tel" id="phone" name="phone" required pattern="\d{3}[-]\d{3}[-]\d{4}" placeholder="123-456-7890">
+            <input type="tel" id="phone" name="phone" placeholder="2664-672345" required>
             <span id="phoneError" class="error"></span>
             
             <label for="message">Mensaje:</label>
@@ -51,7 +50,7 @@
         </form>
         
         <div id="result"></div>
-    
+        
         
 
         <footer>

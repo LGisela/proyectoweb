@@ -5,7 +5,7 @@ body {
     flex-direction: column;
     align-items: center;
     justify-content:flex-start;
-    min-height: 100vh;
+    min-height: 100vh; 
 }
 
 nav ul {
@@ -77,10 +77,10 @@ p {
     font-size: 2.3em;
     text-align: center;
     padding: 20px;
-    font-family:'Lucida Sans', 'lucida Sans' ;
+    font-family:'Roboto', sans-serif;
     color:#ad5d5d;
 }
-/*tarjetas de articulos*/
+
 .product-list{
     display: flex;
     flex-direction: row;
@@ -132,54 +132,49 @@ footer {
     width: 300px;
     height: auto;
 }
-/* Carrusel */
 .carousel-contenedor {
     width: 100%;
-    max-width: 80%;
-    margin: 0 auto;
+    height: 500px; 
     overflow: hidden;
+    position: relative;
 }
 
 .carousel-inner {
-    display: flex;
+    display: flex; 
     transition: transform 0.5s ease;
-    width: calc(100% * 6 / 6); 
-}
-
-.carousel-item {
-    width: 33.3%; 
-    flex-shrink: 0; 
+    width: calc(100% * 6 / 3);   
 }
 
 .carousel-image {
-    width: 100%; 
-    height: auto;
-    max-height: 500px;
+    width: calc(100% / 3); 
+    height: 100%; 
+    object-fit: cover; 
 }
 
 .carousel-buttons {
-    text-align: center;
-    margin-top: 10px;
+    position: absolute;
+    top: 50%; 
+    display: flex;
+    justify-content: space-between; 
+    width: 100%; 
+    transform: translateY(-50%); 
+    z-index: 20; 
 }
 
 .carousel-buttons button {
-    background-color: #ff7850;
+    background-color: rgba(223, 126, 97, 0.8); 
     color: white;
     border: none;
-    padding: 10px 20px;
-    margin: 0 5px;
+    padding: 10px; 
     cursor: pointer;
     font-size: 16px;
+    border-radius: 50%; 
 }
 
 .carousel-buttons button:hover {
-    background-color: #ff9f70;
+    background-color: rgb(51, 32, 27); 
+    transform: scale(1.05); 
 }
-
-
-
-
-
 
 
 @media (max-width: 768px) {
@@ -199,7 +194,7 @@ font-size: 1rem;
     font-size: 2.0rem;
     }
 
- /* Articulos-Targetas */ 
+
 
 .product img {
     width: 100%; 
@@ -207,9 +202,6 @@ font-size: 1rem;
     object-fit: cover;
     border-radius: 5px  5px 0px 0px; 
 }
-
-
-
 
 
 form {
@@ -227,10 +219,9 @@ form {
 
 
 
-
 label {
     margin: 10px 0 5px;
-    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+    font-family: 'Arial', 'Helvetica', sans-serif;
     font-size: 20px;
 }
 
@@ -344,7 +335,7 @@ footer {
     height: auto; 
     margin-right: 8px; 
 }  
-/* Cambio de imágen de artículo */
+
 .imagen-secundaria {
     display: none;
 }
@@ -357,3 +348,16 @@ footer {
     display: block;
 }
 
+.error {
+    color: red; 
+    font-size: 14px; 
+    margin-top: 5px; 
+}
+
+#result {
+    margin-top: 20px; 
+    padding: 10px; 
+    border: 1px solid #ccc; 
+    background-color: #f9f9f9; 
+    border-radius: 5px; 
+}
