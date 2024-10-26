@@ -1,4 +1,5 @@
-document.addEventListener('DOMContentLoaded', () => {
+document.addEventListener("DOMContentLoaded", function() {
+    /*document.addEventListener('DOMContentLoaded', () => {*/
     // Carrusel
     const imagenes = [
         'imagenes/carrucel (3).jpeg',
