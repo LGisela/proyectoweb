@@ -1,15 +1,14 @@
 document.addEventListener("DOMContentLoaded", function() {
-    /*document.addEventListener('DOMContentLoaded', () => {*/
-    // Carrusel
     const imagenes = [
         'imagenes/carrucel (3).jpeg',
         'imagenes/desayuno (2).jpeg',
         'imagenes/1carrucel3.jpeg',
         'imagenes/carrucel (5).jpeg',
         'imagenes/carrucel (4).jpeg',
-        'imagenes/1carrucel2.jpeg'
+        'imagenes/corazondechoco (2).jpeg'
     ];
-
+    
+    
     const carouselInner = document.querySelector('.carousel-inner');
     const nextBtn = document.getElementById("next");
     const previousBtn = document.getElementById("prev");
@@ -23,45 +22,33 @@ document.addEventListener("DOMContentLoaded", function() {
         carouselInner.appendChild(imgElement);
     });
 
-    let currentIndex = 0;
-    const imagesPerView = 3; 
+    let currentIndex = 0; 
     const totalImages = imagenes.length;
 
     function mostrarImagenes() {
-        
-        const offset = -(currentIndex * (100 / imagesPerView));
-        carouselInner.style.transform = `translateX(${offset}%)`;
+        const offset = -currentIndex * 100; 
+        carouselInner.style.transform = `translateX(${offset}%)`; 
     }
 
-    nextBtn.addEventListener("click", () => {
-        currentIndex++;
-        
-        if (currentIndex >= Math.ceil(totalImages / imagesPerView)) {
-            currentIndex = 0; 
-        }
+    function avanzarImagen() {
+        currentIndex = (currentIndex + 1) % totalImages; 
         mostrarImagenes();
-    });
+    }
+
+    nextBtn.addEventListener("click", avanzarImagen);
 
     previousBtn.addEventListener("click", () => {
-        currentIndex--;
-        
-        if (currentIndex < 0) {
-            currentIndex = Math.ceil(totalImages / imagesPerView) - 1; 
-        }
+        currentIndex = (currentIndex - 1 + totalImages) % totalImages; 
         mostrarImagenes();
     });
 
-    mostrarImagenes();
+    mostrarImagenes(); 
+
+  
+    setInterval(avanzarImagen, 3000);
 });
-
-
-
-
-
-
-
-
-
+    
+    
 // Validación del formulario
 if (document.getElementById('contactForm')) {
     document.getElementById('contactForm').addEventListener('submit', function(event) {
@@ -88,9 +75,9 @@ if (document.getElementById('contactForm')) {
             valid = false;
         }
 
-        const phonePattern = /^\d{4}-\d{6}$/; 
+        const phonePattern = /^\d{4} \d{6}$/; 
         if (!phone || !phonePattern.test(phone)) {
-            showError('phoneError', 'El teléfono debe tener el formato 2664-672345.');
+            showError('phoneError', 'El teléfono debe tener el formato 2664 123456.');
             valid = false;
         }
 
@@ -101,6 +88,7 @@ if (document.getElementById('contactForm')) {
 
         if (valid) {
             displayResult(name, email, phone, message);
+            this.reset();
         }
     });
 
