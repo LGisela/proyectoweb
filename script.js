@@ -1,53 +1,48 @@
 document.addEventListener("DOMContentLoaded", function() {
-    const imagenes = [
-        'imagenes/carrucel (3).jpeg',
-        'imagenes/desayuno (2).jpeg',
-        'imagenes/1carrucel3.jpeg',
-        'imagenes/carrucel (5).jpeg',
-        'imagenes/carrucel (4).jpeg',
-        'imagenes/corazondechoco (2).jpeg'
-    ];
-    
-    
-    const carouselInner = document.querySelector('.carousel-inner');
-    const nextBtn = document.getElementById("next");
-    const previousBtn = document.getElementById("prev");
+  const img = document.getElementById("main__carousel-img");
+  const nextBtn = document.getElementById("btn-next");
+  const previousBtn = document.getElementById("btn-previous");
 
-    
-    imagenes.forEach((src) => {
-        const imgElement = document.createElement('img');
-        imgElement.src = src;
-        imgElement.alt = 'Imagen';
-        imgElement.classList.add('carousel-image');
-        carouselInner.appendChild(imgElement);
-    });
+  if (!img || !nextBtn || !previousBtn) {
+      return; 
+  }
 
-    let currentIndex = 0; 
-    const totalImages = imagenes.length;
+  const imagenes = [
+      'imagenes/carrucel (3).jpeg',
+      'imagenes/desayuno (2).jpeg',
+      'imagenes/1carrucel3.jpeg',
+      'imagenes/carrucel (5).jpeg',
+      'imagenes/carrucel (4).jpeg',
+      'imagenes/corazondechoco (2).jpeg'
+  ];
 
-    function mostrarImagenes() {
-        const offset = -currentIndex * 100; 
-        carouselInner.style.transform = `translateX(${offset}%)`; 
-    }
+  let i = 0;
+  img.src = imagenes[i];
 
-    function avanzarImagen() {
-        currentIndex = (currentIndex + 1) % totalImages; 
-        mostrarImagenes();
-    }
+  function next() {
+      i++;
+      if (i >= imagenes.length) {
+          i = 0;
+      }
+      img.src = imagenes[i];
+  }
 
-    nextBtn.addEventListener("click", avanzarImagen);
+  function previous() {
+      i--;
+      if (i < 0) {
+          i = imagenes.length - 1;
+      }
+      img.src = imagenes[i];
+  }
 
-    previousBtn.addEventListener("click", () => {
-        currentIndex = (currentIndex - 1 + totalImages) % totalImages; 
-        mostrarImagenes();
-    });
+  nextBtn.addEventListener("click", next);
+  previousBtn.addEventListener("click", previous);
 
-    mostrarImagenes(); 
-
-  
-    setInterval(avanzarImagen, 3000);
+  setInterval(next, 6000);
 });
-    
+
+
+
     
 // Validación del formulario
 if (document.getElementById('contactForm')) {
