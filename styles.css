@@ -195,6 +195,8 @@ footer {
 
 
 
+
+
 body {
     font-size: 15px;
 }
@@ -225,12 +227,13 @@ h1 {
 
 
 
-/* Estilos del formulario */
+
+
 form {
     display: flex;
     flex-direction: column;
-    width: 100%;  /* Usar el 100% del ancho disponible */
-    max-width: 600px;  /* Limitar el ancho máximo para pantallas grandes */
+    width: 100%;  
+    max-width: 600px;  
     padding: 20px;
     border: 1px solid #d67c3f;
     border-radius: 5px;
@@ -238,30 +241,29 @@ form {
     align-items: center;
     justify-content: center;
     margin: 30px auto;
-    box-sizing: border-box;  /* Asegura que el padding no cause desbordamientos */
+    box-sizing: border-box;  
 }
 
-/* Etiquetas del formulario */
+
 label {
     margin: 10px 0 5px;
     font-family: 'Arial', 'Helvetica', sans-serif;
-    font-size: 18px;  /* Reducir ligeramente el tamaño de la fuente */
-    color: #333;  /* Color de texto más oscuro para mejor contraste */
+    font-size: 18px;  
+    color: #333; 
 }
 
-/* Campos de entrada y área de texto */
+
 input,
 textarea {
     padding: 10px;
     margin-bottom: 15px;
     border: 1px solid #ccc;
     border-radius: 4px;
-    width: 100%;  /* Asegura que los campos se adapten al contenedor */
-    box-sizing: border-box;  /* Incluye el padding dentro del ancho total */
-    font-size: 16px;  /* Tamaño de fuente legible */
-}
+    width: 100%;  
+    box-sizing: border-box; 
+    font-size: 16px;  }
 
-/* Botón de envío */
+
 button {
     padding: 14px;
     background-color: #c92f0180;
@@ -269,42 +271,41 @@ button {
     border: none;
     border-radius: 4px;
     cursor: pointer;
-    font-size: 16px;  /* Tamaño de fuente más accesible */
-    transition: background-color 0.3s;  /* Transición para el hover */
+    font-size: 16px;  
+    transition: background-color 0.3s;  
 }
 
-/* Efecto hover para el botón */
+
 button:hover {
     background-color: #dd5b30;
 }
 
-/* Mensajes de error */
+
 .error {
     color: red;
     font-size: 0.9rem;
     margin-top: 5px;
     margin-bottom: 10px;
-    display: none;  /* Ocultar mensajes por defecto */
-}
+    display: none;  }
 
-/* Estilos responsivos */
+
 @media (max-width: 600px) {
     form {
-        width: 90%;  /* Asegura que el formulario ocupe el 90% del ancho en móviles */
+        width: 90%;  
         padding: 15px;
     }
 
     label {
-        font-size: 16px;  /* Reducir el tamaño de la fuente de las etiquetas */
+        font-size: 16px;  
     }
 
     input,
     textarea {
-        font-size: 14px;  /* Ajustar el tamaño de la fuente en dispositivos pequeños */
+        font-size: 14px;  
     }
 
     button {
-        font-size: 14px;  /* Ajustar el tamaño del botón en dispositivos pequeños */
+        font-size: 14px;  
     }
 }
 
@@ -412,13 +413,12 @@ footer {
 .imagenes-contenedor:hover .imagen-secundaria {
     display: block;
 }
-
 .error {
     color: red;
-    font-size: 14px;
+    font-size: 0.9em;
+    display: block;
     margin-top: 5px;
 }
-
 #result {
     margin-top: 20px;
     padding: 10px;
